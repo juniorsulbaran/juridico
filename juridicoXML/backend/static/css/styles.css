@@ -1,0 +1,3 @@
+#visualization { width: 100%; height: 600px; border: 1px solid #ccc; }
+.justified-text { text-align: justify; }
+.mod-logo img { width: 100%; /* Hace que el logo tome el 100% del ancho del contenedor */ max-width: 200px; /* Establece un ancho máximo para el logo */ height: auto; /* Mantiene la proporción del logo */ } @media (max-width: 768px) { .mod-logo img { max-width: 150px; /* Ajusta el tamaño máximo del logo para pantallas más pequeñas */ } } 
