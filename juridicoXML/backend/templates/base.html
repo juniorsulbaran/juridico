@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prueba SAS</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/styles.css">
-    <link rel="stylesheet" href="static/css/modal.css">
+    <link rel="stylesheet" href="static/css/styles.css"> 
 </head>
 
 <body>
@@ -36,209 +35,44 @@
     <div id="content">
         <div class="container">
             <h1 class="text-center my-4">ESTATUTOS TRIBUTARIOS</h1>
-            <div class="card">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <a href='#' id="openModalBtn">
-                            <strong id="metadatos"> </strong>
-                        </a>
-                        <div class="row">
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col"><strong id="tagexpeditionDate" class="col-12 text-justify"></strong></div>
-                                    <div class="col"><p id="expeditionDate" class="col-12 text-justify"><p></p></div>
+            <a href='#' onclick='listModal()' class="btn btn-light tab-button">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                                <strong id="metadatos"> </strong>
+                            
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col"><strong id="tagexpeditionDate" class="col-12 text-justify"></strong></div>
+                                        <div class="col"><p id="expeditionDate" class="col-12 text-justify"><p></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col"><strong id="tagpublishDate" class="col-12 text-justify"></strong></div>
+                                        <div class="col"><p id="publishDate" class="col-12 text-justify"><p></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col"><strong id="tagDescripcion" class="col-12 text-justify"></strong></div>
+                                        <div class="col"><p id="description" class="col-12 text-justify"><p></p></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col"><strong id="tagpublishDate" class="col-12 text-justify"></strong></div>
-                                    <div class="col"><p id="publishDate" class="col-12 text-justify"><p></p></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col"><strong id="tagDescripcion" class="col-12 text-justify"></strong></div>
-                                    <div class="col"><p id="description" class="col-12 text-justify"><p></p></div>
-                                </div>
-                            </div>
-                        </div>
+                    
                     </div>
                 </div>
-            </div>
+            </a>
             <br>
-            <!-- Contenedor del modal -->
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <!--
-                    <div class="row">
-                        <div class="col-md-6 offset-md-3">
-                            <input type="text" id="searchInput" class="form-control" placeholder="Buscar texto...">
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-6 offset-md-3 text-center">
-                            <button id="prevButton" class="btn btn-secondary">Anterior</button>
-                            <span id="matchCount">0 coincidencias</span>
-                            <button id="nextButton" class="btn btn-secondary">Siguiente</button>
-                        </div>
-                    </div>
-                    -->
-                    <br>
-                    <div class="row">
-                        <div class="col-12 text-center"><strong id="encabezado"> </strong></div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <p id="parrafo1" class="col-12 text-justify"></p>
-                    </div>
-                    <div class="row">
-                        <p id="parrafo2" class="col-12 text-justify"></p>
-                    </div>
-                    <div class="row">
-                        <p id="parrafo3" class="col-12 text-justify"></p>
-                    </div>
-                    <div class="row">
-                        <p id="parrafo4" class="col-12 text-justify"></p>
-                    </div>
-                    <div class="row">
-                        <p id="parrafo5" class="col-12 text-justify"></p>
-                    </div>
-                    <div class="row">
-                        <p id="parrafo6" class="col-12 text-justify"></p>
-                    </div>
-                    <div class="row">
-                        <p id="parrafo7" class="col-12 text-justify"></p>
-                    </div>
-                    <div class="row">
-                        <p id="parrafo8" class="col-12 text-justify"></p>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center"><strong id="parrafo9"> </strong></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <p id="parrafo10"></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <p id="parrafo11"></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <p id="parrafo12" class="col-12 text-justify"></p>
-                    </div>
-                    <div class="row">
-                        <a href='#'>
-                            <p id="notas1" class="col-12 text-justify">Resumen de Notas de Vigencia</p>
-                        </a>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <strong id="parrafo13"></strong>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <p id="parrafo14" class="col-12 text-justify"></p>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <strong id="parrafo15"></strong>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <p id="parrafo16" class="col-12 text-justify"></p>
-                    </div>
-                    <div class="row">
-                        <a href='#'>
-                            <p id="notas1" class="col-12 text-justify">Concordancias</p>
-                        </a>
-                    </div>
-                    <div class="row">
-                        <a href='#'>
-                            <p id="notas1" class="col-12 text-justify">Doctrina Concordante</p>
-                        </a>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <strong id="parrafo17"></strong>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <strong id="parrafo18"></strong>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <strong id="parrafo19"></strong>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <p id="parrafo20" class="col-12 text-justify"></p>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <strong id="parrafo21"></strong>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <p id="parrafo22" class="col-12 text-justify"></p>
-                    </div>
-                    <div class="row">
-                        <a href='#'>
-                            <p id="notas1" class="col-12 text-justify">Concordancias</p>
-                        </a>
-                    </div>
-                    <div class="row">
-                        <a href='#'>
-                            <p id="notas1" class="col-12 text-justify">Jurisprudencia Concordante</p>
-                        </a>
-                    </div>
-                    <div class="row">
-                        <a href='#'>
-                            <p id="notas1" class="col-12 text-justify">Doctrina Concordante</p>
-                        </a>
-                    </div>
-                    <div class="row">
-                        <p id="parrafo23" class="col-12 text-justify"></p>
-                    </div>
-                    <div class="row">
-                        <p id="parrafo24" class="col-12 text-justify"></p>
-                    </div>
-                    <div class="row">
-                        <a href='#'>
-                            <p id="notas1" class="col-12 text-justify">Jurisprudencia Vigencia</p>
-                        </a>
-                    </div>
-                    <div class="row">
-                        <a href='#'>
-                            <p id="notas1" class="col-12 text-justify">Concordancias</p>
-                        </a>
-                    </div>
-                    <div class="row">
-                        <a href='#'>
-                            <p id="notas1" class="col-12 text-justify">Jurisprudencia Concordante</p>
-                        </a>
-                    </div>
-                    <div class="row">
-                        <a href='#'>
-                            <p id="notas1" class="col-12 text-justify">Doctrina Concordante</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- Contenedor del modal -->
+            <div id="texto"></div>
         </div>
-        <script src="static/js/script.js"></script>
-        <script src="static/js/modal.js"></script>
-        <!--<script src="static/js/buscador.js"></script>-->
     </div>
 
     <!-- Footer -->
@@ -249,9 +83,11 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="static/js/script.js"></script>
 </body>
 
 </html>

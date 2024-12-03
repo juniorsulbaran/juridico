@@ -38,3 +38,15 @@ modal-content {
     border-radius: .3rem;
     outline: 0;
 }
+
+.tab-button {
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+    border: 1px solid transparent; /* Borde inicial transparente */
+    color: #000; /* Color del texto inicial */
+}
+
+.tab-button:hover {
+    background-color: #007bff; /* Color de fondo al hacer hover */
+    color: rgb(29, 27, 27); /* Color del texto al hacer hover */
+    border: 1px solid #007bff; /* Borde del mismo color que el fondo */
+}
