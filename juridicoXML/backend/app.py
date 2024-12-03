@@ -14,8 +14,10 @@ def data():
 
 @app.route('/modal') 
 def modal():
+    print('imprimo Modal')
     data = parse_xml('full/et.xml') 
-    return jsonify(data) 
+    return render_template('components/modal.html', data=data)
+
 
 @app.route('/contacto')
 def contacto():

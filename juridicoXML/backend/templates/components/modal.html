@@ -1,0 +1,232 @@
+<style>
+    .modal-body {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra clara */
+        border-radius: 5px; /* Opcional: redondear esquinas */
+    }
+</style>    
+<div id="texto" class="container">
+<div id="textoModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Visor de Documento </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- Buscar -->
+        <div class="modal-header">
+            <div class="row">
+                <div class="col-12 offset-12">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Buscar texto...">
+                </div>
+            </div>
+            <div class="row mt-12">
+                <div class="col-12 offset-12 text-center">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-square-fill" viewBox="0 0 16 16">
+                            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0"/>
+                          </svg>
+                        <span id="matchCount" class="mx-2">0</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+                            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 11.5V5.707l-2.146 2.147a.5.5 0 0 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 1 1-.708.708L7.5 5.707V11.5a.5.5 0 0 1-1 0z"/>
+                          </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Buscar -->
+        <div class="modal-body" style="max-height: 70vh; overflow-y: auto;">
+                <!-- Cuerpo del Documento -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <strong id="encabezado"></strong>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <p id="parrafo1" class="col-12 text-justify">Este es el primer párrafo del documento.</p>
+                </div>
+                <div class="row">
+                    <p id="parrafo2" class="col-12 text-justify">Este es el segundo párrafo del documento.</p>
+                </div>
+                <div class="row">
+                    <p id="parrafo3" class="col-12 text-justify">Este es el tercer párrafo del documento.</p>
+                </div>
+                <div class="row">
+                    <p id="parrafo4" class="col-12 text-justify">Este es el cuarto párrafo del documento.</p>
+                </div>
+                <div class="row">
+                    <p id="parrafo5" class="col-12 text-justify">Este es el quinto párrafo del documento.</p>
+                </div>
+                <div class="row">
+                    <p id="parrafo6" class="col-12 text-justify">Este es el sexto párrafo del documento.</p>
+                </div>
+                <div class="row">
+                    <p id="parrafo7" class="col-12 text-justify">Este es el séptimo párrafo del documento.</p>
+                </div>
+                <div class="row">
+                    <p id="parrafo8" class="col-12 text-justify">Este es el octavo párrafo del documento.</p>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <strong id="parrafo9">Notas Importantes</strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p id="parrafo10">Este es un texto adicional que complementa el documento.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p id="parrafo11">Este es otro texto adicional.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <p id="parrafo12" class="col-12 text-justify">Este es el duodécimo párrafo del documento.</p>
+                </div>
+                <div class="row">
+                    <a href='#'>
+                        <p id="notas1" class="col-12 text-justify">Resumen de Notas de Vigencia</p>
+                    </a>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <strong id="parrafo13">Conclusiones</strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <p id="parrafo14" class="col-12 text-justify">Este es el catorceavo párrafo del documento.</p>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <strong id="parrafo15">Referencias</strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <p id="parrafo16" class="col-12 text-justify">Este es el dieciséisavo párrafo del documento.</p>
+                </div>
+                <div class="row">
+                    <a href='#'>
+                        <p id="notas1" class="col-12 text-justify">Concordancias</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href='#'>
+                        <p id="notas1" class="col-12 text-justify">Doctrina Concordante</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <strong id="parrafo17">Notas Finales</strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <strong id="parrafo18">Agradecimientos</strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <strong id="parrafo19">Cierre</strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <p id="parrafo20" class="col-12 text-justify">Este es el vigésimo párrafo del documento.</p>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <strong id="parrafo21">Notas Adicionales</strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <p id="parrafo22" class="col-12 text-justify">Este es el vigésimo segundo párrafo del documento.</p>
+                </div>
+                <div class="row">
+                    <a href='#'>
+                        <p id="notas1" class="col-12 text-justify">Concordancias</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href='#'>
+                        <p id="notas1" class="col-12 text-justify">Jurisprudencia Concordante</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href='#'>
+                        <p id="notas1" class="col-12 text-justify">Doctrina Concordante</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <p id="parrafo23" class="col-12 text-justify">Este es el vigésimo tercer párrafo del documento.</p>
+                </div>
+                <div class="row">
+                    <p id="parrafo24" class="col-12 text-justify">Este es el vigésimo cuarto párrafo del documento.</p>
+                </div>
+                <div class="row">
+                    <a href='#'>
+                        <p id="notas1" class="col-12 text-justify">Jurisprudencia Vigencia</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href='#'>
+                        <p id="notas1" class="col-12 text-justify">Concordancias</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href='#'>
+                        <p id="notas1" class="col-12 text-justify">Jurisprudencia Concordante</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href='#'>
+                        <p id="notas1" class="col-12 text-justify">Doctrina Concordante</p>
+                    </a>
+                </div>
+                <!-- Fin del Cuerpo del Documento -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+        <!--Body Parrafo-->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="static/js/buscador.js"></script>
+<script>
+    var data = {{ data | tojson }};  // Esto debe estar en un archivo .html o .jinja
+    console.log(data)
+    $('#encabezado').append(data.encabezado);
+    $('#parrafo1').append(data.parrafo1);
+    $('#parrafo2').append(data.parrafo2);
+    $('#parrafo3').append(data.parrafo3);
+    $('#parrafo4').append(data.parrafo4);
+    $('#parrafo5').append(data.parrafo5);
+    $('#parrafo6').append(data.parrafo6);
+    $('#parrafo7').append(data.parrafo7);
+    $('#parrafo8').append(data.parrafo8);
+    $('#parrafo9').append(data.parrafo9);
+    $('#parrafo10').append(data.parrafo10);
+    $('#parrafo11').append(data.parrafo11);
+    $('#parrafo12').append(data.parrafo12);
+    $('#parrafo13').append(data.parrafo13);
+    $('#parrafo14').append(data.parrafo14);
+    $('#parrafo15').append(data.parrafo15);
+    $('#parrafo16').append(data.parrafo16);
+    $('#parrafo17').append(data.parrafo17);
+    $('#parrafo18').append(data.parrafo18);
+    $('#parrafo19').append(data.parrafo19);
+    $('#parrafo20').append(data.parrafo20);
+    $('#parrafo21').append(data.parrafo21);
+    $('#parrafo22').append(data.parrafo22);
+    $('#parrafo23').append(data.parrafo23);
+    $('#parrafo24').append(data.parrafo24);
+</script>
