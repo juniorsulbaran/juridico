@@ -8,6 +8,22 @@
     text-align: justify;
 }
 
+.modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 200%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .3rem;
+    outline: 0;
+    margin-left: -43%;
+}
+
 .mod-logo img {
     width: 100%;
     /* Hace que el logo tome el 100% del ancho del contenedor */
@@ -24,20 +40,58 @@
     }
 }
 
-modal-content {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 150%;
-    pointer-events: auto;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: .3rem;
-    outline: 0;
+.responsive-title {
+    font-size: 5vw; /* Ajusta el tamaño de la fuente según el ancho de la ventana */
 }
+
+@media (max-width: 768px) {
+    .responsive-title {
+        font-size: 8vw; /* Aumenta el tamaño de la fuente en pantallas más pequeñas */
+    }
+
+    .modal-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+        max-width: 100%; /* Asegura que no exceda el ancho de la pantalla */
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: .3rem;
+        outline: 0;
+        margin-left: auto; /* Centrar horizontalmente */
+        margin-right: auto; /* Centrar horizontalmente */
+    }
+}
+
+@media (max-width: 430px) {
+    .responsive-title {
+        font-size: 7vw; /* Aumenta aún más el tamaño en pantallas muy pequeñas */
+    }
+
+    .modal-content {
+        width: 90%; /* Ancho del 90% en pantallas muy pequeñas */
+        max-width: 90%; /* Asegura que no exceda el ancho de la pantalla */
+        margin-left: auto; /* Centrar horizontalmente */
+        margin-right: auto; /* Centrar horizontalmente */
+    }
+}
+
+@media (max-width: 1280px) {
+    .responsive-title {
+        font-size: 8vw; /* Aumenta aún más el tamaño en pantallas medianas */
+    }
+
+    .modal-content {
+        width: 80%; /* Ancho del 80% en pantallas medianas */
+        max-width: 800px; /* Ancho máximo para pantallas medianas */
+        margin-left: auto; /* Centrar horizontalmente */
+        margin-right: auto; /* Centrar horizontalmente */
+    }
+}
+
 
 .tab-button {
     transition: background-color 0.3s, color 0.3s; /* Transición suave */
@@ -46,7 +100,7 @@ modal-content {
 }
 
 .tab-button:hover {
-    background-color: #007bff; /* Color de fondo al hacer hover */
+    background-color: #d0d3d8; /* Color de fondo al hacer hover */
     color: rgb(29, 27, 27); /* Color del texto al hacer hover */
-    border: 1px solid #007bff; /* Borde del mismo color que el fondo */
+    border: 1px solid #c3c6c9; /* Borde del mismo color que el fondo */
 }
